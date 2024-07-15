@@ -14,7 +14,7 @@ export const styles = createUseStyles({
       paddingTop: 10,
    },
    settingMenuItem: {
-      paddingLeft: 15,
+
       height: 50,
       '&:hover': {
          backgroundColor: '#582040',
@@ -50,6 +50,8 @@ export const styles = createUseStyles({
    },
    variable: {
 
+   }, languageMenu: {
+      marginBottom: 20
    },
    "@media(max-width:1000px)": {
       box: {

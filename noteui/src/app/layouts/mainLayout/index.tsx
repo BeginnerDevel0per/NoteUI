@@ -1,6 +1,6 @@
 import React, { ReactNode, useState } from 'react'
 import Navbar from '../../components/navbar'
-import { styles } from './styles';
+import { styles } from './style';
 import classNames from 'classnames';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';

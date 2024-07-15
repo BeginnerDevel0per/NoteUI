@@ -6,3 +6,4 @@ export { default as Navbar } from "./navbar";
 export { default as PasswordUpdate } from "./passwordUpdate";
 export { default as ProfileUpdate } from "./profileUpdate";
 export { default as TextInput } from "./textInput";
+export { default as Select } from "./select";

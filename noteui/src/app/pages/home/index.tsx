@@ -1,12 +1,16 @@
 import React from 'react'
 import { styles } from './style';
 import { Container } from '../../components/index'
+import { useLanguageContext } from '../../context/localization/Localization';
 function Home() {
   const classes = styles();
+
+  const { language } = useLanguageContext();
+
   return (
     <Container>
       <div className={classes.title}>
-        <h1>Son Notların</h1>
+        <h1>{language.title}</h1>
       </div>
       <hr className={classes.hr} />
       <div className={classes.list}>
