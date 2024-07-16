@@ -1,6 +1,6 @@
 import React, { createContext, ReactNode, useContext, useState } from 'react'
-import { en } from '../../resources/en';
-import { tr } from '../../resources/tr';
+import { en } from '../../resources/languages/en';
+import { tr } from '../../resources/languages/tr';
 
 interface LocalizationProps {
     children?: ReactNode

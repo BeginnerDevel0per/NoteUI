@@ -2,10 +2,13 @@ import { createUseStyles } from 'react-jss';
 
 export const styles = createUseStyles(
     {
+        themeSwitch: {
+            marginBottom: 15
+        },
         navItem: {
             width: "100%",
             height: "50px",
-            backgroundColor: "rgba(0,0,0,0.3)",
+            backgroundColor: (theme: any) => theme.navItemBackgroundColour,
             marginTop: "3px",
             alignItems: "center",
             display: "flex",
@@ -48,6 +51,7 @@ export const styles = createUseStyles(
             display: 'none',
         },
         menuButton: {
+            color: (theme: any) => theme.fontColor + "!important",
             cursor: "pointer",
             backgroundColor: "transparent",
             display: "flex",
@@ -57,6 +61,7 @@ export const styles = createUseStyles(
             border: "none",
             width: "100%",
             height: "100%",
+
         },
         "@media (max-width:1000px)": {
             userInformation: {

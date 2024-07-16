@@ -5,8 +5,10 @@ import ContainerFluid from '../../components/containerFluid';
 import icon from '../../assets/icon-crops.png';
 import { Button, Select } from '../../components/index';
 import { useLanguageContext } from '../../context/localization/Localization';
+import { useThemeContext } from '../../context/theme/Theme';
 function Account() {
-  const classes = styles();
+  const { theme } = useThemeContext();
+  const classes = styles(theme);
   const { language } = useLanguageContext();
   return (
     <ContainerFluid JustifyContent="center" AlignItems="center">

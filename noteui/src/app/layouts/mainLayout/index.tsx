@@ -4,13 +4,15 @@ import { styles } from './style';
 import classNames from 'classnames';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { useThemeContext } from '../../context/theme/Theme';
 
 interface MainLayoutProps {
   children?: ReactNode;
 }
 
 function MainLayout({ children }: MainLayoutProps) {
-  const classes = styles();
+  const { theme } = useThemeContext();
+  const classes = styles(theme);
   const [navbarState, setNavbarState] = useState(true);
 
   const navbarClasses = classNames({

@@ -1,12 +1,18 @@
 import React from 'react';
 import Navigations from './navigations/Navigations';
+import { Theme, useThemeContext } from './context/theme/Theme';
 import { styles } from './style';
 
 
+
 function App() {
-  styles();
+  const { theme } = useThemeContext();
+  const classes = styles(theme);
   return (
-    <Navigations></Navigations>
+    <div className={classes.mainContainer}>
+      <Navigations></Navigations>
+    </div>
+
   );
 }
 

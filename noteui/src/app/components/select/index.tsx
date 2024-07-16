@@ -4,12 +4,14 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
 import classNames from 'classnames';
 import { useLanguageContext } from '../../context/localization/Localization';
+import { useThemeContext } from '../../context/theme/Theme';
 
 
 
 function Select() {
     const [menu, setMenu] = useState(false);
-    const classes = styles();
+    const { theme } = useThemeContext();
+    const classes = styles(theme);
 
     const classnames = classNames({
         [classes.optionsActive]: menu,
@@ -19,11 +21,10 @@ function Select() {
         setMenu(!menu);
     }
     const { language, currentLanguage, changeLanguage } = useLanguageContext();
-
     return (
         <div className={classes.selectMenu}>
             <div className={classes.select}>
-                <button onClick={changeState}>{language.languageSettings} <FontAwesomeIcon icon={faChevronDown} /></button>
+                <button onClick={changeState}><span>{language.languageSettings}</span><FontAwesomeIcon icon={faChevronDown} /></button>
             </div>
             <div className={classnames}>
                 <div>

@@ -5,8 +5,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import classNames from 'classnames';
 import { faHome, faNoteSticky, faUser, faRightFromBracket, faPlus, faEllipsis } from '@fortawesome/free-solid-svg-icons'
 import icon from '../../assets/icon-crops.png'
-import { Button, MobileMenu } from '../index';
+import { Button, MobileMenu, ThemeSwitch } from '../index';
 import { useLanguageContext } from '../../context/localization/Localization';
+import { useThemeContext } from '../../context/theme/Theme';
 
 type NavbarProps = {
     navbarState: boolean;
@@ -15,6 +16,7 @@ type NavbarProps = {
 
 
 function Navbar({ navbarState, setNavbarState }: NavbarProps) {
+
 
     const { language } = useLanguageContext();
     const [isMobile, setIsMobile] = useState(false);
@@ -28,14 +30,14 @@ function Navbar({ navbarState, setNavbarState }: NavbarProps) {
         //boyutlandırma durumunu kontrol ediyorum.
         resize();
     });
-    const classes = styles();
+    const { theme } = useThemeContext();
+    const classes = styles(theme);
     const Mobile = classNames(classes.navItem, {
         [classes.Mobile]: isMobile, //mobil görünüm
     });
     const Desktop = classNames(classes.navItem, {
         [classes.Desktop]: !isMobile,
     });
-
 
 
     const [IsOpenMobileMenu, setIsOpenMobileMenu] = useState(false);
@@ -46,6 +48,9 @@ function Navbar({ navbarState, setNavbarState }: NavbarProps) {
         <>
             <MobileMenu MenuState={IsOpenMobileMenu} />
             <div className={classes.userInformation}>
+                <div className={classes.themeSwitch}>
+                <ThemeSwitch></ThemeSwitch>
+                </div>
                 <img width={70} src={icon} alt='...' />
                 <h4 className={classes.Title}>beginner developer</h4>
                 <Button width={150} height={40} fontSize='15px'><FontAwesomeIcon icon={faPlus} /> {language.noteCreate}</Button>

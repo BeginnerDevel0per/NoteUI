@@ -3,7 +3,7 @@ import { createUseStyles } from 'react-jss';
 export const styles = createUseStyles({
     box: {
         boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px",
-        backgroundColor: "rgba(20,20,20)",
+        backgroundColor: (theme: any) => theme.BackgroundColour,
         justifyContent: "center",
         flexDirection: "column",
         alignItems: "center",

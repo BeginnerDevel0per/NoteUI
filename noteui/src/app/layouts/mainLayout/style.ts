@@ -1,6 +1,7 @@
 import { createUseStyles } from 'react-jss';
 import BackgroundImage from '../../assets/black-background-with-leaves-vegetation-texture.jpg';
 
+
 export const styles = createUseStyles({
     Background: {
         position: "fixed",
@@ -17,7 +18,7 @@ export const styles = createUseStyles({
         right: "0",
         width: "calc(100% - 300px)",
         height: "100%",
-        backgroundColor: "rgba(20,20,20,0.85)",
+        backgroundColor: (theme:any)=>theme.bodyBackgroundColor,
         overflowY: "auto",
     },
     BodyForNavDisable: {
@@ -26,7 +27,7 @@ export const styles = createUseStyles({
         position: "fixed",
         width: "100%",
         height: "100%",
-        backgroundColor: "rgba(20,20,20,0.85)",
+        backgroundColor: (theme:any)=>theme.bodyBackgroundColor,
         overflowY: "auto"
     },
     headerForNavActive: {
@@ -34,7 +35,7 @@ export const styles = createUseStyles({
         position: "fixed",
         borderRight: "1px solid rgba(65,65,65)",
         boxShadow: "rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px",
-        backgroundColor: "rgba(20,20,20)",
+        backgroundColor:  (theme:any)=>theme.BackgroundColour,
         width: "300px",
         left: "0",
         height: "100%",
@@ -44,7 +45,7 @@ export const styles = createUseStyles({
         position: "fixed",
         borderRight: "1px solid rgba(65,65,65)",
         boxShadow: "rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px",
-        backgroundColor: "rgba(20,20,20)",
+        backgroundColor:  (theme:any)=>theme.BackgroundColour,
         width: "300px",
         left: "-300px",
         height: "100%",
@@ -62,7 +63,7 @@ export const styles = createUseStyles({
         borderRadius: 50,
         width: 40,
         height: 40
-    }, 
+    },
     navButtonDisable: {
         transition: "left 0.5s ease",
         position: "absolute",

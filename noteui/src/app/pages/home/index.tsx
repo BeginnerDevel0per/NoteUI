@@ -2,8 +2,10 @@ import React from 'react'
 import { styles } from './style';
 import { Container } from '../../components/index'
 import { useLanguageContext } from '../../context/localization/Localization';
+import { useThemeContext } from '../../context/theme/Theme';
 function Home() {
-  const classes = styles();
+  const { theme } = useThemeContext();
+  const classes = styles(theme);
 
   const { language } = useLanguageContext();
 

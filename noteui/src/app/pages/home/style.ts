@@ -21,7 +21,7 @@ export const styles = createUseStyles({
         height: 250,
         width: 250,
         borderRadius: 5,
-        backgroundColor: "black",
+        backgroundColor: (theme:any)=>theme.BackgroundColour,
         fontSize: "small",
     }, "@media(max-width:1000px)": {
         list: {

@@ -4,17 +4,16 @@ export const styles = createUseStyles({
       width: 850,
       height: 600,
       borderRadius: 10,
-      backgroundColor: "rgba(25,25,25,0.90)",
+      backgroundColor: (theme:any)=>theme.BackgroundColour,
       display: "flex",
    },
    settingMenu: {
-      backgroundColor: "rgba(20,20,20)",
+      backgroundColor: (theme:any)=>theme.accountMenuBackgroundColour,
       borderRadius: "10px 0 0 10px",
       width: 300,
       paddingTop: 10,
    },
    settingMenuItem: {
-
       height: 50,
       '&:hover': {
          backgroundColor: '#582040',
@@ -40,7 +39,7 @@ export const styles = createUseStyles({
       alignItems: "center",
       width: "100%",
       height: "120px",
-      backgroundColor: "black",
+      backgroundColor: (theme:any)=>theme.accountInformation,
    },
    userImage: {
       marginRight: 20

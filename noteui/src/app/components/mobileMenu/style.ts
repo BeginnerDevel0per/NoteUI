@@ -11,12 +11,17 @@ export const styles = createUseStyles({
         height: "100%",
         width: "100%",
     },
+    themeSwitch: {
+        display: "flex",
+        width: "100%",
+        marginRight: 20,
+        justifyContent: "end",
+        alignItems: "center",
+    },
     navItem: {
         display: "flex",
-        marginTop: 10,
-        marginBottom: 10,
         width: "100%",
-        height: 40,
+        height: 50,
     },
     navLink: {
         fontSize: "large",

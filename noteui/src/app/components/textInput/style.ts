@@ -3,9 +3,9 @@ import { createUseStyles } from 'react-jss';
 export const styles = createUseStyles({
     Input: {
         width: "100%",
-        backgroundColor: "rgba(20,20,20)",
-        border: "3px solid rgba(45,45,45)",
-        color: "white",
+        backgroundColor: (theme: any) => theme.inputBackgroundColor,
+        border: (theme: any) => theme.inputBorder,
+        color: (theme: any) => theme.fontColor,
         fontSize: "large",
         padding: 10,
         borderRadius: 5,

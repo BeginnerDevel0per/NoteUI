@@ -13,6 +13,7 @@ export const styles = createUseStyles({
         paddingTop: "10px",
         position: "relative",
         "& button": {
+            color: (theme: any) => theme.fontColor + "!important",
             cursor: "pointer",
             marginLeft: 10,
             fontSize: "large",
@@ -20,6 +21,9 @@ export const styles = createUseStyles({
             height: "100%",
             border: "none",
             backgroundColor: "transparent",
+            "& span": {
+                marginRight: 10
+            }
         }
     },
     optionsActive: {
@@ -36,8 +40,8 @@ export const styles = createUseStyles({
             height: 50,
             border: "none",
             backgroundColor: "black",
-            "&:hover":{
-                backgroundColor:"rgba(25,25,25)"
+            "&:hover": {
+                backgroundColor: "rgba(25,25,25)"
             }
         }
     },

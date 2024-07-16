@@ -3,9 +3,11 @@ import { Button, TextInput } from '../../components/index';
 import { styles } from './style';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faKeyboard } from '@fortawesome/free-solid-svg-icons';
+import { useThemeContext } from '../../context/theme/Theme';
 
 function Register() {
-    const classes = styles();
+   const{theme}= useThemeContext();
+    const classes = styles(theme);
     return (
         <div className={classes.box}>
             <div className={classes.logo}>
