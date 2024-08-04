@@ -12,7 +12,7 @@ const useThemeContext = () => useContext(themeContext);
 
 
 function Theme({ children }: ThemeProps) {
-    const [theme, setTheme] = useState(light);
+    const [theme, setTheme] = useState(dark);
 
     const changeTheme = (theme: string) => {
         theme === "light" ? setTheme(light) : setTheme(dark);

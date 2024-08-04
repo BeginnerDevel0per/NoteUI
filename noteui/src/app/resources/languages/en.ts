@@ -18,5 +18,9 @@ export const en = {
     passwordInformation: "In case of password change, all sessions will be closed...",
     newPasswordAgain: "New Password Again",
     signOut: "Sign Out",
+    hello: "Hello",
+    newNote: "New Note",
+    yourTaskList:"Your Task List",
+    yourNotes: "Your Notes",
 }
 

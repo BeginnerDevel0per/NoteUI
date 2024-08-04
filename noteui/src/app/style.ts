@@ -4,6 +4,17 @@ export const styles = createUseStyles({
   "@global": {
     body: {
       margin: 0,
+    }, "::-webkit-scrollbar": {
+      width: "5px",
+      height: "5px",
+    },
+    "::-webkit-scrollbar-track": {
+      borderRadius: "5px",
+      background: "rgba(50,50,50)"
+    },
+    "::-webkit-scrollbar-thumb": {
+      borderRadius: "5px",
+      background: "rgba(80,80,80)",
     }
   },
   mainContainer: {
@@ -13,9 +24,6 @@ export const styles = createUseStyles({
     fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif",
     "& a": {
       color: (theme: any) => theme.fontColor,
-      "&:hover": {
-        color: "rgba(200, 200, 200)",
-      },
     },
     "& button": {
       color: "rgb(200,200,200)",

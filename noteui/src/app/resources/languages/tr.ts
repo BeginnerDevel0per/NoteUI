@@ -18,4 +18,8 @@ export const tr = {
     passwordInformation: "Şifre değişikliği durumunda tüm oturumlar kapatılır...",
     changePassword: "Şifre Değiştir",
     signOut: "Oturumu Kapat",
+    hello: "Merhaba",
+    newNote: "Yeni Not",
+    yourTaskList: "Görev Listen",
+    yourNotes: "Notların",
 }

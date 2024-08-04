@@ -6,16 +6,22 @@ export const styles = createUseStyles(
             marginBottom: 15
         },
         navItem: {
-            width: "100%",
+            width: "80%",
             height: "50px",
             backgroundColor: (theme: any) => theme.navItemBackgroundColour,
-            marginTop: "3px",
+            marginTop: "5px",
             alignItems: "center",
             display: "flex",
-            borderRadius: "5px",
+            borderRadius: "5px", 
+            "& a": {
+                "&:hover": {
+                   color: "rgba(200, 200, 200)",
+                },
+              },
             '&:hover': {
                 backgroundColor: '#582040',
-            }
+            },
+           
         },
         navLink: {
             display: "flex",
@@ -23,9 +29,12 @@ export const styles = createUseStyles(
             width: "100%",
             height: "100%",
             fontWeight: "bold",
-            paddingLeft: "50px",
-            fontSize: "large",
+            paddingLeft: "20px",
+            fontSize: "normal",
             textDecoration: "none",
+           
+              
+            
 
         },
         navLinkIcon: {
@@ -43,8 +52,11 @@ export const styles = createUseStyles(
             marginTop: "5px",
         },
         navList: {
-
-        }, Mobile: {
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+        }, 
+        Mobile: {
             display: 'none',
         },
         Desktop: {
@@ -62,6 +74,12 @@ export const styles = createUseStyles(
             width: "100%",
             height: "100%",
 
+        }, profileImage: {
+            boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px",
+            width: 80,
+            height: 80,
+            objectFit: "cover",
+            borderRadius: 50
         },
         "@media (max-width:1000px)": {
             userInformation: {
@@ -72,6 +90,7 @@ export const styles = createUseStyles(
             },
             navList: {
                 display: "flex",
+                flexDirection: "row",
                 width: "100%",
             },
             navItem: {

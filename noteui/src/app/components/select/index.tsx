@@ -20,7 +20,7 @@ function Select() {
     const changeState = () => {
         setMenu(!menu);
     }
-    const { language, currentLanguage, changeLanguage } = useLanguageContext();
+    const { language, changeLanguage } = useLanguageContext();
     return (
         <div className={classes.selectMenu}>
             <div className={classes.select}>

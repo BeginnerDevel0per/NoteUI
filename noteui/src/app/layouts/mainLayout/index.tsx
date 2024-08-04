@@ -5,6 +5,8 @@ import classNames from 'classnames';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useThemeContext } from '../../context/theme/Theme';
+import { Authentication } from '../../context/authentication/Authentication';
+
 
 interface MainLayoutProps {
   children?: ReactNode;
@@ -14,7 +16,7 @@ function MainLayout({ children }: MainLayoutProps) {
   const { theme } = useThemeContext();
   const classes = styles(theme);
   const [navbarState, setNavbarState] = useState(true);
-
+  
   const navbarClasses = classNames({
     [classes.headerForNavActive]: navbarState,//navbarstate true ise bunu koyacak classa
     [classes.headerForNavDisable]: !navbarState,
@@ -30,16 +32,19 @@ function MainLayout({ children }: MainLayoutProps) {
   const toggleNavbar = () => {
     setNavbarState(!navbarState);
   }
+
   return (
-    <div className={classes.Background}>
-      <button onClick={toggleNavbar} className={navButtonClasses}><FontAwesomeIcon icon={faBars} /></button>
-      <header className={navbarClasses}>
-        <Navbar navbarState={navbarState} setNavbarState={setNavbarState} />
-      </header>
-      <div className={bodyClasses}>
-        {children}
+    <Authentication>
+      <div className={classes.Background}>
+        <button onClick={toggleNavbar} className={navButtonClasses}><FontAwesomeIcon icon={faBars} /></button>
+        <header className={navbarClasses}>
+          <Navbar navbarState={navbarState} setNavbarState={setNavbarState} />
+        </header>
+        <div className={bodyClasses}>
+          {children}
+        </div>
       </div>
-    </div>
+    </Authentication>
   )
 }
 

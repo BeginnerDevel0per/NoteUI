@@ -11,6 +11,9 @@ export const styles = createUseStyles({
         display: "flex",
         height: "750px",
         width: "500px",
+        "& button": {
+            marginTop: 15,
+        }
     },
     logo: {
         display: "flex",
@@ -28,6 +31,9 @@ export const styles = createUseStyles({
         marginTop: 25,
         paddingRight: "25px",
         width: "auto",
+        "& input": {
+            width: "100%",
+        }
     },
     loginForm: {
         width: "100%",
@@ -45,6 +51,9 @@ export const styles = createUseStyles({
             color: "white",
             textDecoration: "none",
         }
+    }, validationMessage: {
+        marginRight: 30,
+        marginLeft: 30,
     },
     "@media(max-width:1000px)": {
         box: {
@@ -57,8 +66,13 @@ export const styles = createUseStyles({
             flexDirection: "column",
             alignItems: "center",
             display: "flex",
+
         },
         inputGroup: {
+            marginRight: 30,
+            marginLeft: 30,
+        },
+        validationMessage: {
             marginRight: 30,
             marginLeft: 30,
         },

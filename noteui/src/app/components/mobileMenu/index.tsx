@@ -1,6 +1,6 @@
-import React from 'react'
+import React, { MouseEventHandler } from 'react'
 import { styles } from './style'
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faRightFromBracket, faUser } from '@fortawesome/free-solid-svg-icons';
 import classNames from 'classnames';
@@ -12,12 +12,18 @@ type PropMenu = {
 }
 
 function MobileMenu({ MenuState }: PropMenu) {
+    const navigate = useNavigate();
     const { language } = useLanguageContext();
     const classes = styles();
     const classnames = classNames(classes.mobileMenu, {
         [classes.open]: MenuState,
         [classes.close]: !MenuState,
     });
+    const logOut = () => {
+     
+        localStorage.removeItem("JWT");
+        navigate("/login");
+    }
     return (
         <div className={classnames}>
             <div className={classes.navItem}>
@@ -29,7 +35,7 @@ function MobileMenu({ MenuState }: PropMenu) {
                 <Link className={classes.navLink} to="/Account/ProfileUpdate"><FontAwesomeIcon className={classes.navLinkIcon} icon={faUser} /><span>{language.myAccount}</span> </Link>
             </div>
             <div className={classes.navItem}>
-                <Link className={classes.navLink} to="/"><FontAwesomeIcon className={classes.navLinkIcon} icon={faRightFromBracket} />{language.signOut}</Link>
+                <Link onClick={logOut} className={classes.navLink} to="/Login"><FontAwesomeIcon className={classes.navLinkIcon} icon={faRightFromBracket} />{language.signOut}</Link>
             </div>
         </div>
     )

@@ -4,11 +4,11 @@ export const styles = createUseStyles({
       width: 850,
       height: 600,
       borderRadius: 10,
-      backgroundColor: (theme:any)=>theme.BackgroundColour,
+      backgroundColor: (theme: any) => theme.BackgroundColour,
       display: "flex",
    },
    settingMenu: {
-      backgroundColor: (theme:any)=>theme.accountMenuBackgroundColour,
+      backgroundColor: (theme: any) => theme.accountMenuBackgroundColour,
       borderRadius: "10px 0 0 10px",
       width: 300,
       paddingTop: 10,
@@ -39,7 +39,7 @@ export const styles = createUseStyles({
       alignItems: "center",
       width: "100%",
       height: "120px",
-      backgroundColor: (theme:any)=>theme.accountInformation,
+      backgroundColor: (theme: any) => theme.accountInformation,
    },
    userImage: {
       marginRight: 20
@@ -49,8 +49,33 @@ export const styles = createUseStyles({
    },
    variable: {
 
-   }, languageMenu: {
+   },
+   languageMenu: {
       marginBottom: 20
+   },
+   fileInput: {
+      marginTop: 10,
+      display: "flex",
+      borderRadius: 5,
+      justifyContent: "center",
+      alignItems: "center",
+      fontSize: "small",
+      backgroundColor: "#582040",
+      width: 150,
+      height: 35,
+      cursor: "pointer",
+      "&:hover": {
+         backgroundColor: "#582850",
+      }
+   }, hidden: {
+      display: "none",
+   },
+   profileImage: {
+      boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px",
+      width: 80,
+      height: 80,
+      objectFit: "cover",
+      borderRadius: 50
    },
    "@media(max-width:1000px)": {
       box: {

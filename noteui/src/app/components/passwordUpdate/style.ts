@@ -8,7 +8,11 @@ export const styles = createUseStyles({
     },
     InputGroup: {
         marginTop: 25,
-        marginRight: 25
+        marginRight: 25,
+        "& input": {
+            width: "100%",
+        }
+
     },
     submitButton: {
         marginTop: 13,
@@ -16,8 +20,8 @@ export const styles = createUseStyles({
         justifyContent: "end"
     }, "@media(max-width:1000px)": {
         Form: {
-            marginRight: 30,
-            marginLeft: 30
+            marginRight: 0,
+            marginLeft: 0
         }
     }
 })

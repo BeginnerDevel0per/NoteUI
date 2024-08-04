@@ -1,6 +1,6 @@
 import React from 'react';
 import Navigations from './navigations/Navigations';
-import { Theme, useThemeContext } from './context/theme/Theme';
+import {  useThemeContext } from './context/theme/Theme';
 import { styles } from './style';
 
 

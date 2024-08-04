@@ -1,5 +1,5 @@
 import { createUseStyles } from 'react-jss';
-import BackgroundImage from '../../assets/black-background-with-leaves-vegetation-texture.jpg';
+import BackgroundImage from '../../assets/golden-monstera-leaves-background-design-resource.jpg'
 
 
 export const styles = createUseStyles({
@@ -18,7 +18,8 @@ export const styles = createUseStyles({
         right: "0",
         width: "calc(100% - 300px)",
         height: "100%",
-        backgroundColor: (theme:any)=>theme.bodyBackgroundColor,
+        backgroundColor: (theme: any) => theme.bodyBackgroundColor,
+        backdropFilter: "blur(10px)",
         overflowY: "auto",
     },
     BodyForNavDisable: {
@@ -27,15 +28,16 @@ export const styles = createUseStyles({
         position: "fixed",
         width: "100%",
         height: "100%",
-        backgroundColor: (theme:any)=>theme.bodyBackgroundColor,
+        backgroundColor: (theme: any) => theme.bodyBackgroundColor,
+        backdropFilter: "blur(10px)",
         overflowY: "auto"
     },
     headerForNavActive: {
+        zIndex: 50,
         transition: "0.5s ease",
         position: "fixed",
-        borderRight: "1px solid rgba(65,65,65)",
-        boxShadow: "rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px",
-        backgroundColor:  (theme:any)=>theme.BackgroundColour,
+        boxShadow: "dimgray 0px 0px 1px",
+        backgroundColor: (theme: any) => theme.BackgroundColour,
         width: "300px",
         left: "0",
         height: "100%",
@@ -43,14 +45,14 @@ export const styles = createUseStyles({
     headerForNavDisable: {
         transition: "left 0.5s ease",
         position: "fixed",
-        borderRight: "1px solid rgba(65,65,65)",
-        boxShadow: "rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px",
-        backgroundColor:  (theme:any)=>theme.BackgroundColour,
+        borderRight: "2px solid gray",
+        backgroundColor: (theme: any) => theme.BackgroundColour,
         width: "300px",
         left: "-300px",
         height: "100%",
     },
     navButtonActive: {
+        cursor: "pointer",
         transition: "left 0.5s ease",
         position: "absolute",
         left: "280px",
@@ -65,6 +67,7 @@ export const styles = createUseStyles({
         height: 40
     },
     navButtonDisable: {
+        cursor: "pointer",
         transition: "left 0.5s ease",
         position: "absolute",
         left: "0",

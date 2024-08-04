@@ -1,4 +1,4 @@
-import React, { ReactNode } from 'react'
+import React, { MouseEventHandler, ReactNode } from 'react'
 import { styles } from './style';
 
 interface ButtonProps {
@@ -6,14 +6,22 @@ interface ButtonProps {
   width?: any,
   height?: any,
   fontSize?: string,
-  type?: string,
+  type?: "submit" | "reset" | "button" | undefined,
+  onClick?: MouseEventHandler<HTMLButtonElement> | undefined;
 }
 
-function Button({ children, width, height, fontSize, type = "button" }: ButtonProps) {
+function Button({ children, width, height, fontSize, type = "button", onClick }: ButtonProps) {
 
-  const classes = styles({ width, height, fontSize });
+  const customButton = { width, height, fontSize }
+
+
+  const classes = styles(customButton);
+  if (!classes.buttonStyle)
+    return <div>loading...</div>
+
+
   return (
-    <button typeof={type} className={classes.buttonStyle}>{children}</button>
+    <button onClick={onClick} type={type} className={classes.buttonStyle}>{children}</button>
   )
 }
 

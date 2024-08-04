@@ -8,3 +8,4 @@ export { default as ProfileUpdate } from "./profileUpdate";
 export { default as TextInput } from "./textInput";
 export { default as Select } from "./select";
 export { default as ThemeSwitch } from "./themeSwitch";
+export { default as ToDoList } from "./toDoList";
