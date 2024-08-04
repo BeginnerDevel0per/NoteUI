@@ -1,11 +1,9 @@
 import { createUseStyles } from 'react-jss';
-import BackgroundImage from '../../assets/golden-monstera-leaves-background-design-resource.jpg'
 
 
 export const styles = createUseStyles({
     Background: {
         position: "fixed",
-        backgroundImage: `url(${BackgroundImage})`,
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
         width: '100%',
