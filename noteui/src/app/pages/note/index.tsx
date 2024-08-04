@@ -85,7 +85,6 @@ function Note() {
 
     return (
         <div className={classes.editor}>
-
             <div className={classes.container}>
                 <input ref={titleRef} className={classes.titleInput} defaultValue={title} type='text' placeholder='Başlık' />
                 <div id='editorjs'></div>
