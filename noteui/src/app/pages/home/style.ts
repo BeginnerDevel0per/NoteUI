@@ -5,6 +5,7 @@ export const styles = createUseStyles({
         marginTop: 50,
         display: "flex",
         justifyContent: "center",
+        fontSize: "large"
     },
     title: {
         marginBottom: 0,
@@ -83,6 +84,10 @@ export const styles = createUseStyles({
         },
         note: {
             Width: "100%"
-        }
+        },
+        welcomeText: {
+            fontSize: "xx-small",
+            textAlign:"center",
+        },
     }
 })

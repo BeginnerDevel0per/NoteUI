@@ -87,7 +87,13 @@ function Navbar({ navbarState, setNavbarState }: NavbarProps) {
                 <div className={classes.themeSwitch}>
                     <ThemeSwitch></ThemeSwitch>
                 </div>
-                <img className={classes.profileImage} src={profileImage} alt='...' />
+                {
+                    profileImage === "" ?
+                        <img className={classes.profileImage} src={profileImage} alt='...' />
+                        :
+                        <FontAwesomeIcon className={classes.userIcon} icon={faUser} />
+                }
+
                 <h4 className={classes.Title}>{userInformation?.UserName}</h4>
                 <Button onClick={createNote} width={150} height={40} fontSize='15px'><FontAwesomeIcon icon={faPlus} /> {language.noteCreate}</Button>
             </div>

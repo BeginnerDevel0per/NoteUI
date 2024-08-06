@@ -33,6 +33,7 @@ function Note() {
                     uploader: {
                         uploadByFile(file: File) {
                             return noteService.AddImage(new AddNoteImageDto(String(id), file)).then((response) => {
+                                console.log(response);
                                 return response;
                             })
                         }

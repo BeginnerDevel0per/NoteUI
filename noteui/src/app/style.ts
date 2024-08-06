@@ -21,7 +21,7 @@ export const styles = createUseStyles({
     color: (theme: any) => theme.fontColor,
     transition: "0.5s ease",
     margin: 0,
-    fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif",
+    fontFamily: 'ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"',
     "& a": {
       color: (theme: any) => theme.fontColor,
     },

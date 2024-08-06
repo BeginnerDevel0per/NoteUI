@@ -9,6 +9,8 @@ import { useThemeContext } from '../../context/theme/Theme';
 import { userService } from '../../services/UserService';
 import UserDto from '../../services/Shared/UserDto';
 import { Field, Form, Formik } from 'formik';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faUser } from '@fortawesome/free-solid-svg-icons';
 function Account() {
   const { theme } = useThemeContext();
   const classes = styles(theme);
@@ -61,7 +63,12 @@ function Account() {
         <div className={classes.settingMenuBody}>
           <div className={classes.information}>
             <div className={classes.userImage}>
-              <img className={classes.profileImage} src={profileImage} width={90} alt='...' />
+            {
+                    profileImage === "" ?
+                        <img className={classes.profileImage} src={profileImage} alt='...' />
+                        :
+                        <FontAwesomeIcon className={classes.userIcon} icon={faUser} />
+                }
             </div>
             <div className={classes.userInformation}>
               <span>{userInformation?.UserName}</span>

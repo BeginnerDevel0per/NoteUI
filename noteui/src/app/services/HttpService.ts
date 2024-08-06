@@ -49,9 +49,8 @@ class HttpService {
 
     async Delete<T>(url: string, jwt?: string, data?: T) {
         try {
-            const response = await axios.get(mainUrl + this.BaseUrl,
+            const response = await axios.delete(mainUrl + this.BaseUrl + url,
                 {
-                    params: data,
                     headers: { "Authorization": `Bearer ${jwt}` }
                 })
             return response;

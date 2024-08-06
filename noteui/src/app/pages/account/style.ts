@@ -76,6 +76,9 @@ export const styles = createUseStyles({
       height: 80,
       objectFit: "cover",
       borderRadius: 50
+   }, userIcon: {
+      width: 70,
+      height: 70,
    },
    "@media(max-width:1000px)": {
       box: {

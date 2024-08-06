@@ -12,16 +12,16 @@ export const styles = createUseStyles(
             marginTop: "5px",
             alignItems: "center",
             display: "flex",
-            borderRadius: "5px", 
+            borderRadius: "5px",
             "& a": {
                 "&:hover": {
-                   color: "rgba(200, 200, 200)",
+                    color: "rgba(200, 200, 200)",
                 },
-              },
+            },
             '&:hover': {
                 backgroundColor: '#582040',
             },
-           
+
         },
         navLink: {
             display: "flex",
@@ -32,10 +32,6 @@ export const styles = createUseStyles(
             paddingLeft: "20px",
             fontSize: "normal",
             textDecoration: "none",
-           
-              
-            
-
         },
         navLinkIcon: {
             marginRight: "10px",
@@ -55,7 +51,7 @@ export const styles = createUseStyles(
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
-        }, 
+        },
         Mobile: {
             display: 'none',
         },
@@ -80,6 +76,10 @@ export const styles = createUseStyles(
             height: 80,
             objectFit: "cover",
             borderRadius: 50
+        },
+        userIcon: {
+            width: 50,
+            height: 50,
         },
         "@media (max-width:1000px)": {
             userInformation: {

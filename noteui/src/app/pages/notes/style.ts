@@ -16,7 +16,47 @@ export const styles = createUseStyles({
     link: {
         textDecoration: "none",
     },
+    menubtn: {
+        position: "absolute",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        right: 5,
+        top: 5,
+        "& :hover": {
+            backgroundColor: (theme: any) => theme.BackgroundColour
+        },
+        "& button": {
+            color: (theme: any) => theme.fontColor,
+            fontSize: 15,
+            borderRadius: 50,
+            backgroundColor: "transparent"
+        }
+    },
+    menu: {
+        position: "absolute",
+        backgroundColor: (theme: any) => theme.bodyBackgroundColor,
+        width: 100,
+        height: "auto",
+        right: 3,
+        top: 25,
+        borderRadius: 5,
+        zIndex: 5,
+        "& button": {
+            color:(theme: any) => theme.fontColor,
+            width: "100%",
+            height: 30,
+            backgroundColor: "transparent",
+            "& svg": {
+                paddingRight: 10
+            },
+            "&:hover": {
+                backgroundColor: (theme: any) => theme.BackgroundColour,
+            }
+        }
+    },
     note: {
+        position: "relative",
         marginBottom: 10,
         height: 150,
         width: 150,
